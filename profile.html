@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+
+        /* Center website */
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 60px;
+            word-break: break-all;
+
+        }
+
+        h2 {
+            font-size: 50px;
+            word-break: break-all;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .row {
+            margin: 10px -16px;
+        }
+
+        /* Add padding BETWEEN each column */
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            display: none;
+            /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* C,ontent */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #ff5959;
+            color: white;
+
+        }
+
+        .container {
+            position: relative;
+            max-width: 800px;
+            /* Maximum width */
+            margin: 0 auto;
+            /* Center it */
+        }
+
+        .container .content {
+            position: absolute;
+            /* Position the background text */
+            bottom: 0;
+            /* At the bottom. Use top:0 to append it to the top */
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.5);
+            /* Black background with 0.5 opacity */
+            color: #Ff5959;
+            /* Grey text */
+            width: 100%;
+            /* Full width */
+            padding: 20px;
+            /* Some padding */
+        }
+
+        div.stars {
+
+            width: 270px;
+
+            display: inline-block;
+
+        }
+
+
+
+        input.star {
+            display: none;
+        }
+
+
+        label.star {
+
+            float: right;
+
+            padding: 10px;
+
+            font-size: 36px;
+
+            color: #f9fb07;
+
+            transition: all .2s;
+
+        }
+
+
+        input.star:checked~label.star:before {
+
+            content: '\f005';
+
+            color: #FD4;
+
+            transition: all .25s;
+
+        }
+
+
+
+        input.star-5:checked~label.star:before {
+
+            color: #FE7;
+
+            text-shadow: 0 0 20px #952;
+
+        }
+
+
+
+        input.star-1:checked~label.star:before {
+            color: #Ff5959;
+        }
+
+
+        label.star:hover {
+            transform: rotate(-15deg) scale(1.3);
+        }
+
+
+
+        label.star:before {
+            content: '\f006';
+
+            font-family: FontAwesome;
+
+        }
+
+        .bttnon {
+            border: none;
+            background-color: inherit;
+            padding: 14px;
+            font-size: 19px;
+            cursor: pointer;
+            display: inline-block;
+
+        }
+
+        /* On mouse-over */
+        .btnton:hover {
+            background: #eee;
+        }
+
+        .esraa {
+            color: #ff5959;
+        }
+
+        .fa fa-comments {
+            content: "\f086";
+            float: right;
+
+            padding: 10px;
+
+            font-size: 36px;
+
+            color: #f9fb07;
+
+            transition: all .2s;
+
+
+        }
+
+        .main-container {
+            padding: 20px;
+            color: #ff5959
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MAIN (Center website) -->
+
+    <div class="container">
+        <img src="%D9%87%D9%84%D8%AB%D9%8A.jpg" alt="Notebook" style="width:100%;" width="300" height="350">
+        <div class="content">
+            <h1>HOME FOOD</h1>
+            <p></p>
+            <div class="stars">
+
+                <form action="">
+                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                    <label class="star star-5" for="star-5"></label>
+                    <input class="star star-4" id="star-4" type="radio" name="star" />
+
+                    <label class="star star-4" for="star-4"></label>
+
+                    <input class="star star-3" id="star-3" type="radio" name="star" />
+
+                    <label class="star star-3" for="star-3"></label>
+
+                    <input class="star star-2" id="star-2" type="radio" name="star" />
+
+                    <label class="star star-2" for="star-2"></label>
+
+                    <input class="star star-1" id="star-1" type="radio" name="star" />
+
+                    <label class="star star-1" for="star-1"></label>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <h2> Akl sala </h2>
+
+        <hr>
+        <div>
+
+            <a href="ptn"><i class="fa fa-phone" style="color:#00e600;"></i></a>
+
+            <a href="ptn"><i class="fa fa-envelope-o" style="color: #3385ff;"></i></a>
+            <a href="ptn"><i class="fa fa-map-marker info" style="color:#4db8ff;"></i></a>
+            <a href="ptn"><i class="fa fa-youtube" style="color:red;"></i></a>
+            <a href="ptn"><i class="fa fa-facebook" style="color:blue;"></i></a>
+            <a href="ptn"><i class="fa fa-twitter" style="color: #33adff;"></i></a>
+        </div>
+
+        <div class="main-container">
+            <p><i class="fa fa-map-marker info" aria-hidden="true"></i><a href="btn"> Alexandria-Shatby </a> </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('nature')"> Menu</button>
+        <button class="btn" onclick="filterSelection('cars')"> Offers</button>
+        <button class="btn" onclick="filterSelection('people')"> The most wanted</button>
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+        <div class="column nature">
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+            <div class="content">
+                <img src="%D8%B1%D8%B25.jpg" alt="Mountains" style="width:100%" width="70px" height="200px">
+                <h4><a href="#"> Rice </a> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span> </h4>
+                <p>100$</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+                <img src="%D8%A8%D9%8A%D8%AA%D8%B2%D8%A7%D8%A7%D8%A7%D8%A7%D8%A7%D8%A7%D8%A7%D8%A7.jpg" alt="Lights" style="width:100%" width="70px" height="200px">
+                <h4><a href="#">Pastry </a> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span></h4>
+                <p>100$</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+                <img src="%D8%A7%D9%84%D9%84%D8%AD%D9%88%D9%85.jpg" alt="Nature" style="width:100%" width="70px" height="200px">
+                <h4><a href="#"> Meat </a><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span></h4>
+                <p>100$</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="column cars">
+        <div class="content">
+            <img src="IMG-20190315-WA0112.jpg" alt="Car" style="width:100%" width="70px" height="200px">
+            <h4><a href="#"> Sandwiches </a><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span> </h4>
+            <p>46$</p>
+        </div>
+    </div>
+    <div class="column cars">
+        <div class="content">
+            <img src="images%D8%A9%D8%B8%D9%85.jpg" alt="Car" style="width:100%" width="70px" height="200px">
+            <h4><a href="#">Healthy food</a>
+
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </h4>
+            <p>67$</p>
+        </div>
+    </div>
+    <div class="column cars">
+        <div class="content">
+            <img src="%D9%81%D8%B1%D8%A7%D8%AE.jpg" alt="Car" style="width:100%" width="70px" height="200px">
+            <h4><a href="#">Chicks</a> <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span> </h4>
+            <p>100$</p>
+        </div>
+    </div>
+
+    <div class="column people">
+        <div class="content">
+            <img src="IMG-20190315-WA0103.jpg" alt="Car" style="width:100%" width="70px" height="200px">
+            <h4><a href="#">Fries </a> <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span></h4>
+            <p>100$</p>
+        </div>
+    </div>
+    <div class="column people">
+        <div class="content">
+            <img src="%D8%B7%D9%88%D8%A7%D8%AC%D9%86.jpg" alt="Car" style="width:100%" width="70px" height="200px">
+            <h4><a href="#"> Hot Vegetables </a><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span> </h4>
+            <p>100$</p>
+        </div>
+    </div>
+    <div class="column people">
+        <div class="content">
+            <img src="%D8%AD%D9%84%D9%88%D9%8A%D8%A7%D8%A7%D8%A7%D8%A7%D8%A7%D8%AA.jpg" alt="Car" style="width:100%" width="70px" height="200px">
+            <h4><a href="#"> Sweets </a> <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span></h4>
+            <p>100$</p>
+        </div>
+    </div>
+    <br>
+    <a href="#"><button class="esraa">Back</button></a>
+    <!-- END GRID -->
+
+
+    <!-- END MAIN -->
+
+
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
